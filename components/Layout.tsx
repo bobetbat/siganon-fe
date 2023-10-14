@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, Stack, Typography } from '@mui/material';
+import {  Card,  Stack, Typography } from '@mui/material';
 import { ReactNode, useEffect, useState } from 'react';
 import { Footer } from './Footer';
 import { Header } from './Header';
@@ -12,9 +12,6 @@ type Props = {
 
 export const Layout: React.FC<Props> = ({ children, footer, header }) => {
   const { isConnected } = useAccount()
-  const [image, setImage] = useState()
-  console.log('getAttestation')
-
   return (
     <>
       <main>
@@ -30,7 +27,9 @@ export const Layout: React.FC<Props> = ({ children, footer, header }) => {
           }}
         >
           {isConnected ? children :  <Card sx={{ alignSelf: "center", maxWidth: '80vw', marginTop: "30vh", p: "16px", backgroundColor: "#f0f0f0" }}>
-            Connect wallet
+            <Typography>
+             Connect wallet
+            </Typography>
           </Card>}
         </Stack>
       </main>
