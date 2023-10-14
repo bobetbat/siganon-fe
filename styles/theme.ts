@@ -7,11 +7,10 @@ import { red } from '@mui/material/colors';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#556cd6',
-      contrastText: "#fff",
+      main: '#000000',
     },
     secondary: {
-      main: '#19857b',
+      main: '#F5F5F7',
     },
     error: {
       main: red.A400,

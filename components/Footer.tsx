@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { Stack,Box ,Toolbar } from '@mui/material';
+import theme from '../styles/theme';
 
 export const Footer: React.FC = () => {
 
   return (
     <footer>
-      <Stack sx={{ bottom: 1, bgcolor: 'primary.main', justifySelf: 'flex-end' }}>
+      <Stack sx={{ bottom: 1, bgcolor:theme.palette.primary.main, justifySelf: 'flex-end' }}>
         <Box maxWidth="xl">
           <Toolbar disableGutters>
             <Box sx={{

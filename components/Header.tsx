@@ -2,11 +2,12 @@ import * as React from 'react';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useRouter } from 'next/router';
 import { Button, Stack,AppBar ,Toolbar,Box} from '@mui/material';
+import theme from '../styles/theme';
 
 export const Header: React.FC = () => {
   const router = useRouter();
   return (
-    <AppBar>
+    <AppBar sx={{bgcolor:theme.palette.primary.main}}>
       <Box maxWidth="xl">
         <Toolbar
           disableGutters

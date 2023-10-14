@@ -1,13 +1,11 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Layout } from '../components/Layout';
-import { useRouter } from 'next/router';
-import { Typography } from '@mui/material';
+import { Blocks } from '../components/Block';
+import { ActionButton } from '../components/ActionButton';
 
 
 const Home: NextPage = () => {
-  const router = useRouter();
-
   return (
     <>
       <Head>
@@ -21,9 +19,15 @@ const Home: NextPage = () => {
       </Head>
 
       <Layout header footer>
-        <Typography>
-          hello
-        </Typography>
+        <Blocks title="Siganon" subtitle="  A blockchain-based platform revolutionizes contract signing and dispute resolution with anonymity, privacy, and security." />
+        <Blocks reverse title="The main feature" subtitle="is ability to keep the identities of the counterparties hidden during the contract signing process. This ensures that the parties involved can maintain anonymity and privacy until it becomes absolutely necessary to reveal their identities." />
+        <Blocks title="The moment a dispute arises..." subtitle={`"Siganon" reveals the necessary information to resolve the dispute off-chain. This unique feature allows for swift and efficient dispute resolution while preserving the privacy of the parties involved as much as possible.`} />
+
+        <Blocks reverse title="Ideal for businesses and individuals" subtitle="who value privacy and security in their contractual agreements. It combines the efficiency of electronic signatures with the security and transparency of blockchain technology, providing a secure and efficient solution for contract signing and dispute resolution." />
+
+        <Blocks title="Join" subtitle="In a world where privacy and security are of utmost importance, offering a revolutionary solution that protects users' identities while ensuring that contracts are signed and disputes are resolved efficiently.">
+          <ActionButton>Join</ActionButton>
+        </Blocks>
       </Layout>
     </>
   );
