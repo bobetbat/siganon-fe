@@ -1,8 +1,8 @@
 import { Typography } from '@mui/material';
 import { styled } from '@mui/system';
 
-export const Title =styled(Typography)(({ theme, color }) => ({
-  color: color || theme.palette.text.primary,
+export const Title = styled(Typography)(({ theme, color }) => ({
+  color: color || theme.palette.primary.main,
   textAlign: 'center',
   fontFamily: 'Helvetica Neue',
   fontSize: '50.859px',
@@ -12,8 +12,8 @@ export const Title =styled(Typography)(({ theme, color }) => ({
   letterSpacing: '1px',
 }));
 
-export const Subtitle =styled(Typography)(({ theme, color }) => ({
-  color: color || theme.palette.text.primary,
+export const Subtitle = styled(Typography)(({ theme, color }) => ({
+  color: color || theme.palette.primary.main,
   textAlign: 'center',
   fontFamily: 'Helvetica Neue',
   fontSize: '24px',
