@@ -2,11 +2,11 @@ import { Card, Stack, Typography } from '@mui/material';
 import { useRouter } from 'next/router';
 import { ActionButton } from './ActionButton';
 
-export const GeneralDashborad = () => {
+export const ContractDashboard = () => {
   const router = useRouter();
 
   const handlePreview = () => {
-    router.push(`/contract/create`);
+    console.log('sign')
   };
 
   return (
@@ -21,8 +21,8 @@ export const GeneralDashborad = () => {
         {/* Add your general data, totals, id, and name here */}
         <Stack direction="row" spacing={2}>
 
-          <ActionButton onClick={()=>handlePreview()}>
-            create contract
+          <ActionButton onClick={() => handlePreview()}>
+            sign
           </ActionButton>
         </Stack>
       </Stack>

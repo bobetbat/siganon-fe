@@ -1,6 +1,8 @@
-import { List, ListItem, ListItemText } from '@mui/material';
+import { Divider, List, ListItem, ListItemText } from '@mui/material';
 import { useRouter } from 'next/router';
 import { ActionButton } from './ActionButton';
+
+const mocks = ['Contract 1', 'Contract 2', 'Contract 3']
 
 export const Contracts = () => {
   const router = useRouter();
@@ -11,12 +13,15 @@ export const Contracts = () => {
 
   return (
     <List>
-      {['Contract 1', 'Contract 2', 'Contract 3'].map((contract, index) => (
-        <ListItem key={index}>
-          <ListItemText primary={contract} secondary="Address" />
-          <ListItemText primary={'status'} />
-          <ActionButton onClick={() => handlePreview(contract)}>Preview</ActionButton>
-        </ListItem>
+      {mocks.map((contract, index) => (
+        <>
+          <ListItem key={index}>
+            <ListItemText primary={contract} secondary="Address" />
+            <ListItemText primary={'status'} />
+            <ActionButton onClick={() => handlePreview(contract)}>Preview</ActionButton>
+          </ListItem>
+          {index !== mocks.length - 1 ? <Divider variant="middle" component="li" /> : null}
+        </>
       ))}
     </List>
   );

@@ -5,9 +5,11 @@ export const ActionButton = styled(Button)({
   paddingInline: "1rem",
   fontWeight: 600,
   color: 'white',
+  border:"2px solid white",
   backgroundColor: 'black',
   '&:hover': {
-    backgroundColor: 'white',
+  border:"2px solid black",
+  backgroundColor: 'white',
     color: 'black',
   },
 });
