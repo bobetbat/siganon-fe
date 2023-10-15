@@ -31,7 +31,7 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
 
 const projectId = process.env.NEXT_PUBLIC_PROJECT_ID ?? '';
 const { connectors } = getDefaultWallets({
-  appName: 'sss',
+  appName: 'Siganon',
   projectId: projectId,
   chains,
 });
