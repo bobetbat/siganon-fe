@@ -15,3 +15,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.MuiDropzoneArea-root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  direction: column;
+  border: 1px solid #000;
+  border-radius: 32px;
+}

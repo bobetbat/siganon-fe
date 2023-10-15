@@ -1,8 +1,7 @@
 import type { NextPage } from 'next';
 import { Layout } from '../../components/Layout';
-import { GeneralDashborad } from '../../components/GeneralDashborad';
-import { Contracts } from '../../components/Contracts';
 import { ContractDashboard } from '../../components/ContractDashboard';
+import { Connected } from '../../components/Connected';
 
 
 const Contract: NextPage = () => {
@@ -10,7 +9,9 @@ const Contract: NextPage = () => {
   return (
     <>
       <Layout header footer px py>
-      <ContractDashboard />
+        <Connected>
+          <ContractDashboard />
+        </Connected>
       </Layout>
     </>
   );

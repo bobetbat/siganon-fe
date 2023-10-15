@@ -1,19 +1,22 @@
 import type { NextPage } from 'next';
 import { Layout } from '../components/Layout';
-import { GeneralDashborad } from '../components/GeneralDashborad';
-import { Contracts } from '../components/Contracts';
+import { DragAndDropUpload } from '../components/DragAndDropUpload';
+import { Connected } from '../components/Connected';
 
 
-const Dashboard: NextPage = () => {
-
+const CreateSign: NextPage = () => {
+  const handleCreateSign = (data: any) => {
+    console.log('data', data)
+  }
   return (
     <>
       <Layout header footer px py>
-      <GeneralDashborad />
-      <Contracts />
+        <Connected>
+          <DragAndDropUpload onChange={handleCreateSign} />
+        </Connected>
       </Layout>
     </>
   );
 };
 
-export default Dashboard;
+export default CreateSign;

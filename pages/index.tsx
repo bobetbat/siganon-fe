@@ -3,9 +3,12 @@ import Head from 'next/head';
 import { Layout } from '../components/Layout';
 import { Blocks } from '../components/Block';
 import { ActionButton } from '../components/ActionButton';
+import { useRouter } from 'next/router';
 
 
 const Home: NextPage = () => {
+  const router = useRouter();
+
   return (
     <>
       <Head>
@@ -26,7 +29,7 @@ const Home: NextPage = () => {
         <Blocks reverse title="Ideal for businesses and individuals" subtitle="who value privacy and security in their contractual agreements. It combines the efficiency of electronic signatures with the security and transparency of blockchain technology, providing a secure and efficient solution for contract signing and dispute resolution." />
 
         <Blocks title="Join" subtitle="In a world where privacy and security are of utmost importance, offering a revolutionary solution that protects users' identities while ensuring that contracts are signed and disputes are resolved efficiently.">
-          <ActionButton>Join</ActionButton>
+          <ActionButton onClick={() => router.push(`/create`)}>Join</ActionButton>
         </Blocks>
       </Layout>
     </>
