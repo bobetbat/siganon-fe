@@ -1,7 +1,7 @@
 declare module 'react-signature-canvas' {
   import React from 'react';
 
-  export interface SignatureCanvasProps {\
+  export interface SignatureCanvasProps {
     penColor:string;
     canvasProps:any;
     ref:any;
