@@ -4,7 +4,9 @@ const appId = process.env.NEXT_PUBLIC_SISMO_APP_ID ?? '';
 const config: SismoConnectConfig = {
   appId: appId,
 }
+
 const groupId = "0x93cbee3eb1c601c694d32ab9759c1e92"
+
 export const SismoConnect = () => <SismoConnectButton
   // the client config created
   config={config}
@@ -20,6 +22,7 @@ export const SismoConnect = () => <SismoConnectButton
   onResponse={async (response: SismoConnectResponse) => {
     //Send the response to your server to verify it
     //thanks to the @sismo-core/sismo-connect-server package
+    console.log("SismoConnect response", response)
   }}
   onResponseBytes={async (bytes: string) => {
     //Send the response to your contract to verify it

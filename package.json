@@ -24,7 +24,8 @@
     "react-mui-dropzone": "^4.0.7",
     "react-signature-canvas": "^1.0.6",
     "viem": "~1.12.2",
-    "wagmi": "~1.4.2"
+    "wagmi": "~1.4.2",
+    "web3.storage": "^4.5.5"
   },
   "devDependencies": {
     "@types/node": "^18.16.12",

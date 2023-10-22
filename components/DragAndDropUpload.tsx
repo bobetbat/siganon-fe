@@ -5,18 +5,27 @@ import { Grid, Stack } from '@mui/material';
 import { ActionButton } from './ActionButton';
 import { Subtitle, Title } from './Typography';
 
-export const DragAndDropUpload: React.FC<{ onChange: (v: any) => void }> = ({ onChange }) => {
-  const [file, setFile] = useState<Uint8Array>()
+export const DragAndDropUpload: React.FC<{ onSubmit: (v: File) => void }> = ({ onSubmit }) => {
+  const [file, setFile] = useState<File>()
   const handleDrop = (files: FileObject[]) => {
     // Handle the dropped files
-    console.log(files);
-    const bytes32 = base64ToBytes32(files[0].data)
-    setFile(bytes32)
+    // const bytes32 = base64ToBytes32(files[0].data)
+    const newFile = new File([files[0].file], 'siganon.jpeg', {
+      type: files[0].file.type,
+      lastModified: files[0].file.lastModified,
+  });
+
+    setFile(newFile)
   };
 
   const handleSubmit = () => {
-    onChange(file)
-    console.log('submit upload', file)
+    if (file) {
+      console.log('file',file);
+      onSubmit(file)
+      console.log('submit upload', file)
+    } else {
+      console.log('no file to upload')
+    }
   };
 
   return (
