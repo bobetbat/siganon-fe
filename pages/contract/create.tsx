@@ -12,7 +12,7 @@ const CreateContract: NextPage = () => {
     <>
       <Connected>
         <Layout header footer px py>
-          <DragAndDropUpload onChange={handleCreateSign} />
+          <DragAndDropUpload onSubmit={handleCreateSign} />
         </Layout>
       </Connected>
     </>
