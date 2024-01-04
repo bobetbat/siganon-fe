@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
           <Button onClick={() => router.push('/')}>
             <Image src={'/logo.jpg'} width={40}height={40} alt={'logo'} ></Image>
           </Button>
-          <SismoConnect />
+          {/* <SismoConnect /> */}
           <Stack direction='row' gap={2}>
             <ConnectButton />
           </Stack>
